@@ -17,7 +17,7 @@ export const getData = async (endpoint, token = null) => {
 
 // POST request function
 export const postData = async (endpoint, data, token = null) => {
-  console.log("data" + token);
+  console.log(process.env.API_URL);
   try {
     const headers = token
       ? { Authorization: `Bearer ${token}`, "Content-Type": "application/json" }
